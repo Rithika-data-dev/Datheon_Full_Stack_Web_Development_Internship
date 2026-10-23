@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task Manager | Plan your day</title>
+<meta name="description" content="A task manager with categories, due dates, filters and search. Your tasks are saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <h1>My tasks</h1>
+    <p id="summary" class="muted" aria-live="polite"></p>
+  </header>
+
+  <form id="add-form" class="add" autocomplete="off">
+    <label class="sr" for="title">Task title</label>
+    <input id="title" name="title" type="text" placeholder="What needs to be done?" maxlength="120" required>
+    <label class="sr" for="category">Category</label>
+    <select id="category" name="category">
+      <option>Work</option><option>Personal</option><option>Study</option>
+    </select>
+    <label class="sr" for="due">Due date</label>
+    <input id="due" name="due" type="date">
+    <button class="btn primary" type="submit">Add task</button>
+  </form>
+  <p id="error" class="error" role="alert" hidden></p>
+
+  <div class="tools">
+    <div class="filters" role="group" aria-label="Filter by status">
+      <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="active" aria-pressed="false">Active</button>
+      <button class="chip" data-filter="completed" aria-pressed="false">Completed</button>
+    </div>
+    <label class="sr" for="search">Search tasks</label>
+    <input id="search" type="search" placeholder="Search tasks">
+    <label class="sr" for="cat-filter">Filter by category</label>
+    <select id="cat-filter">
+      <option value="all">All categories</option><option>Work</option><option>Personal</option><option>Study</option>
+    </select>
+  </div>
+
+  <ul id="list" class="list" aria-label="Task list"></ul>
+  <p id="empty" class="empty" hidden></p>
+
+  <footer class="foot">
+    <span class="muted">Drag tasks by the handle to reorder them.</span>
+    <button id="clear" class="btn" type="button">Clear completed</button>
+  </footer>
+</main>
+
+<dialog id="edit-dialog" aria-labelledby="edit-title">
+  <form id="edit-form" method="dialog">
+    <h2 id="edit-title">Edit task</h2>
+    <label for="e-title">Title</label>
+    <input id="e-title" type="text" maxlength="120" required>
+    <label for="e-category">Category</label>
+    <select id="e-category"><option>Work</option><option>Personal</option><option>Study</option></select>
+    <label for="e-due">Due date</label>
+    <input id="e-due" type="date">
+    <div class="row">
+      <button class="btn" type="button" id="e-cancel">Cancel</button>
+      <button class="btn primary" type="submit">Save changes</button>
+    </div>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>
