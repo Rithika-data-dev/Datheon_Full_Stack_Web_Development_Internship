@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name | Developer Portfolio</title>
+<meta name="description" content="Portfolio of Your Name, a web developer building fast, accessible, responsive sites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#home" class="logo">YN.dev</a>
+    <nav id="nav" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" class="icon-btn" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+    <button id="menu" class="icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section id="home" class="hero wrap">
+    <div>
+      <h1>I build web apps that load fast and work for everyone.</h1>
+      <p class="lead">Hi, I’m Your Name, a front-end developer who turns ideas into responsive, accessible products.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <pre class="code" aria-label="Code snippet describing the developer"><code><span class="c">// profile.js</span>
+const developer = {
+  name: "Your Name",
+  focus: ["HTML", "CSS", "JavaScript"],
+  buildsWith: "care",
+  available: true,
+};</code></pre>
+  </section>
+
+  <section id="about" class="wrap section">
+    <h2>About me</h2>
+    <div class="two">
+      <p>I’m a computer science student who enjoys turning designs into clean, working interfaces. I care about semantic markup, performance and keyboard-friendly experiences.</p>
+      <p>When I’m not coding, I contribute to open source, write notes on what I learn, and explore new web APIs. Replace this text with your own story.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="wrap section">
+    <h2>Tech stack</h2>
+    <ul class="skills">
+      <li><strong>HTML5</strong><span>Semantic, accessible markup</span></li>
+      <li><strong>CSS3</strong><span>Flexbox, Grid, animations</span></li>
+      <li><strong>JavaScript</strong><span>ES6+, DOM, fetch</span></li>
+      <li><strong>Tailwind CSS</strong><span>Utility-first styling</span></li>
+      <li><strong>Git &amp; GitHub</strong><span>Branching, pull requests</span></li>
+      <li><strong>React</strong><span>Components and hooks</span></li>
+      <li><strong>Node.js</strong><span>REST APIs with Express</span></li>
+      <li><strong>Figma</strong><span>Design handoff</span></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="wrap section">
+    <h2>Featured projects</h2>
+    <div class="projects">
+      <article class="card">
+        <h3>Task Flow</h3>
+        <p>A drag-and-drop task board that saves to the browser.</p>
+        <p class="tags">JavaScript · CSS Grid</p>
+        <button class="btn" data-project="0">View details</button>
+      </article>
+      <article class="card">
+        <h3>Weather Now</h3>
+        <p>Live forecasts for any city using a public weather API.</p>
+        <p class="tags">Fetch API · HTML5</p>
+        <button class="btn" data-project="1">View details</button>
+      </article>
+      <article class="card">
+        <h3>Shop Lane</h3>
+        <p>A responsive storefront with cart and product filters.</p>
+        <p class="tags">React · Tailwind CSS</p>
+        <button class="btn" data-project="2">View details</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="resume" class="wrap section">
+    <h2>Resume</h2>
+    <ol class="timeline">
+      <li><time>2024 – Present</time><div><h3>B.E. Computer Science</h3><p>Your University. Relevant courses: web technologies, data structures, databases.</p></div></li>
+      <li><time>2025</time><div><h3>Front-end Intern, Company Name</h3><p>Built reusable UI components and improved page speed by 30%.</p></div></li>
+      <li><time>2024</time><div><h3>Certification: Responsive Web Design</h3><p>Completed 300 hours of hands-on projects.</p></div></li>
+    </ol>
+    <a class="btn" href="resume.pdf" download>Download resume (PDF)</a>
+  </section>
+
+  <section id="contact" class="wrap section">
+    <h2>Contact</h2>
+    <p class="lead">Have a project or an opportunity? Send me a message.</p>
+    <ul class="links">
+      <li><a href="mailto:you@example.com">you@example.com</a></li>
+      <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap foot">© <span id="year"></span> Your Name. Built with HTML, CSS and JavaScript.</footer>
+
+<dialog id="modal" aria-labelledby="m-title">
+  <button class="icon-btn close" id="close" aria-label="Close dialog">✕</button>
+  <h3 id="m-title"></h3>
+  <p id="m-desc"></p>
+  <p class="tags" id="m-tech"></p>
+  <div class="actions"><a class="btn primary" id="m-live" target="_blank" rel="noopener">Live demo</a><a class="btn" id="m-code" target="_blank" rel="noopener">Source code</a></div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
